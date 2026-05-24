@@ -20,7 +20,7 @@ const AddDestinationPage = () => {
     const destination = Object.fromEntries(formData.entries());
     console.log(destination);
 
-    const res = await fetch("http://localhost:5000/destination", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/destination`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -29,9 +29,8 @@ const AddDestinationPage = () => {
     });
 
     const data = await res.json();
-    redirect('/destinations')
+    redirect("/destinations");
     console.log(data);
-    
   };
 
   return (

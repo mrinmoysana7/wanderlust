@@ -35,7 +35,7 @@ const BookingCard = ({ destination }) => {
     // console.log(bookingData);
 
     try {
-      const res = await fetch("http://localhost:5000/booking", {
+      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/booking", {
         method: "POST",
         headers: {
           "content-type": "application/json",

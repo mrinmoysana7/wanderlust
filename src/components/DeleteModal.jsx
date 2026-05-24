@@ -20,7 +20,7 @@ const DeleteModal = ({ destination }) => {
 
   const handleDelete = async () => {
     // Module: 52.7
-    const res = await fetch(`http://localhost:5000/destination/${_id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/destination/${_id}`, {
       method: "DELETE",
     });
     const data = await res.json();

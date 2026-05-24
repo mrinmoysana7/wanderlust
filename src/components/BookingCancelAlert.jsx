@@ -6,12 +6,15 @@ import React from "react";
 
 const BookingCancelAlert = ({ bookingId }) => {
   const handleCancelBooking = async () => {
-    const res = await fetch(`http://localhost:5000/booking/${bookingId}`, {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json",
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/booking/${bookingId}`,
+      {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
       },
-    });
+    );
     const data = await res.json();
 
     window.location.reload();

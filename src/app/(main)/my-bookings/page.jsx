@@ -15,7 +15,7 @@ const MyBookingPage = async () => {
   const user = session?.user;
 
   // Module: 52.8
-  const res = await fetch(`http://localhost:5000/booking/${user?.id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/booking/${user?.id}`);
 
   const bookings = await res.json();
 
