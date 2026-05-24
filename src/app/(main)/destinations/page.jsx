@@ -1,7 +1,9 @@
 import DestinationCard from "@/components/DestinationCard";
 
 const destinationPage = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/destination`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/destination`, {
+    cache: "no-store",
+  });
   const destinations = await res.json();
 
   return (

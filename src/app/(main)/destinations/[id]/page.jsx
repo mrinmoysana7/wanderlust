@@ -10,7 +10,12 @@ import { SlCalender } from "react-icons/sl";
 const DestinationDetailsPage = async ({ params }) => {
   // Module: 52.5
   const { id } = await params;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/destination/${id}`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/destination/${id}`,
+    {
+      cache: "no-store",
+    },
+  );
   const destination = await res.json();
   console.log(destination);
 
