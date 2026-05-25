@@ -35,7 +35,7 @@ const AddDestinationPage = () => {
 
   return (
     // Module: 52.3
-    <div className="max-w-2xl mx-auto space-y-5 py-5">
+    <div className="max-w-2xl p-5 mx-auto space-y-5 py-5">
       <h1 className="text-2xl font-bold">Add Destination</h1>
       <form onSubmit={onSubmit} className="p-15 space-y-8 shadow-lg rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
