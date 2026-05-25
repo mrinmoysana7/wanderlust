@@ -44,11 +44,9 @@ const BookingCard = ({ destination }) => {
       });
 
       const data = await res.json();
-
       toast.success("You booked successfully");
-    } catch (error) {
-      toast.error("Booking Unsuccessfull!");
-    }
+      window.location.reload();
+    } catch (error) {}
   };
 
   return (

@@ -27,8 +27,9 @@ const Navbar = () => {
       setTimeout(() => {
         router.push("/");
       }, 1500);
+      window.location.reload();
     } catch (error) {
-      toast.error("Failed to logout.");
+      // toast.error("Failed to logout.");
     }
   };
 

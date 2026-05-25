@@ -52,7 +52,7 @@ const SignInPage = () => {
     <div className="container mx-auto min-h-[70vh] p-5 flex justify-center items-center  rounded-xl">
       <ToastContainer></ToastContainer>
       <Form
-        className="flex w-96 flex-col gap-4 shadow-2xl p-10 rounded-xl"
+        className="flex w-full max-w-md flex-col gap-4 shadow-2xl p-10 rounded-xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         <TextField
@@ -110,21 +110,23 @@ const SignInPage = () => {
           <Check />
           Sign In
         </Button>
-        <div className="flex justify-center items-center gap-3">
-          <Separator />
-          <div className="whitespace-nowrap">Or Sign in with</div>
-          <Separator />
+        <div className="flex w-full items-center gap-3">
+          <Separator className="flex-1" />
+          <div className="whitespace-nowrap text-sm text-gray-500">
+            Or Sign in with
+          </div>
+          <Separator className="flex-1" />
         </div>
         <Button
           onClick={handleGoogleSignin}
-          className="w-full bg-white border border-gray-200 text-black rounded-none"
+          className="w-full bg-white border border-gray-300 text-black rounded-xl"
         >
-          <FcGoogle />
+          <FcGoogle className="text-xl" />
           Sign in with Google
         </Button>
 
-        <div className="flex items-center gap-2">
-          <p>Do Not Have An Account ? </p>{" "}
+        <div className="flex items-center justify-center gap-2">
+          <p>Do Not Have An Account ? </p>
           <Link href="/signup" className="text-red-600">
             Register
           </Link>

@@ -53,7 +53,7 @@ const SignUpPage = () => {
     <div className="container mx-auto min-h-[70vh] p-5 flex justify-center items-center  rounded-xl">
       <ToastContainer></ToastContainer>
       <Form
-        className="flex w-96 flex-col gap-4 shadow-2xl p-10 rounded-xl"
+        className="flex max-w-md w-full flex-col gap-4 shadow-2xl p-10 rounded-xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Name */}
@@ -132,15 +132,15 @@ const SignUpPage = () => {
             Sign Up
           </Button>
         </div>
-        <div className="flex justify-center items-center gap-3">
-          <Separator />
+        <div className="flex w-full items-center gap-3">
+          <Separator className="flex-1" />
           <div className="whitespace-nowrap">Or Sign up with</div>
-          <Separator />
+          <Separator className="flex-1" />
         </div>
         <div>
           <Button
             onClick={handleGoogleSignin}
-            className="w-full bg-white border border-gray-200 text-black rounded-none"
+            className="w-full bg-white border border-gray-300 text-black rounded-xl"
           >
             <FcGoogle />
             Sign in with Google

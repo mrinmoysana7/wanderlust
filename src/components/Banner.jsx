@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Banner = () => {
   return (
     <div
@@ -84,8 +86,9 @@ const Banner = () => {
             Explore Now
           </button>
 
-          <button
-            className="
+          <Link href="/destinations">
+            <button
+              className="
               uppercase
               px-6
               py-3
@@ -98,9 +101,10 @@ const Banner = () => {
               w-full
               sm:w-auto
             "
-          >
-            View Destination
-          </button>
+            >
+              View Destination
+            </button>
+          </Link>
         </div>
       </div>
 
