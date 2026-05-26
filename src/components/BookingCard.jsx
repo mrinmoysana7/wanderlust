@@ -65,11 +65,10 @@ const BookingCard = ({ destination }) => {
           w-full
           p-5
           sm:p-6
-          md:p-8
+          md:px-20
           rounded-2xl
-          shadow-lg
-          border
           space-y-6
+          shadow-lg
         "
       >
         {/* Heading */}
@@ -82,7 +81,7 @@ const BookingCard = ({ destination }) => {
               text-gray-600
             "
           >
-            Starting from
+            Starting froms
           </h2>
 
           {/* Price */}
@@ -114,7 +113,7 @@ const BookingCard = ({ destination }) => {
                 w-full
                 rounded-xl
                 border
-                px-3
+                md:px-30
                 py-2
               "
             >

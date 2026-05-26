@@ -12,6 +12,7 @@ const Banner = () => {
         flex
         flex-col
         justify-between
+        mt-0
       "
     >
       {/* Banner Content */}

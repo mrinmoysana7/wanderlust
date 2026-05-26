@@ -32,5 +32,7 @@ export const auth = betterAuth({
       maxAge: 7 * 24 * 60 * 60,
     },
   },
+  trustedOrigins: ["http://localhost:3000"],
+
   plugins: [jwt()],
 });

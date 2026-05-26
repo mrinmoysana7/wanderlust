@@ -7,6 +7,7 @@ import React from "react";
 
 const BookingCancelAlert = ({ bookingId }) => {
   const handleCancelBooking = async () => {
+    // Module: 54.6
     const { data: tokenData } = await authClient.token();
 
     const res = await fetch(
@@ -15,6 +16,7 @@ const BookingCancelAlert = ({ bookingId }) => {
         method: "DELETE",
         headers: {
           "content-type": "application/json",
+          // Module: 54.6
           authorization: `Bearer ${tokenData?.token}`,
         },
       },

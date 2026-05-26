@@ -2,7 +2,7 @@ import BookingCard from "@/components/BookingCard";
 import DeleteModal from "@/components/DeleteModal";
 import { EditModal } from "@/components/EditModal";
 import { auth } from "@/lib/auth";
-import { Button } from "@heroui/react";
+// import { Button } from "@heroui/react";
 import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,11 +44,11 @@ const DestinationDetailsPage = async ({ params }) => {
 
   return (
     // Module: 52.5
-    <div className="container mx-auto md:space-y-10 py-5 md:py-15">
+    <div className="container mx-auto space-y-5 py-5 md:py-10">
       {/* Module: 52.6 */}
-      <div className="flex items-center p-5 justify-between">
+      <div className="flex items-center px-5 justify-between">
         <Link href="/destinations">
-          <button>All Collections</button>
+          <button className="text-xl font-semibold">All Collections</button>
         </Link>
         <div className="flex items-center gap-2">
           <EditModal destination={destination}></EditModal>
@@ -63,11 +63,11 @@ const DestinationDetailsPage = async ({ params }) => {
           alt={destinationName}
           height={500}
           width={800}
-          className="p-5 bg-blue-100 h-60 w-full rounded-lg shadow-md object-cover"
+          className="p-5 h-60 md:h-130 w-full rounded-lg shadow-md object-cover"
         ></Image>
       </div>
 
-      <div className="flex flex-col p-5 gap-10">
+      <div className="flex-cols md:flex justify-between p-5 gap-10">
         <div className="flex p-5 justify-between">
           <div className="space-y-5">
             <div className="space-y-5">
